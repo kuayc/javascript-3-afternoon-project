@@ -1,93 +1,86 @@
-/*
-  Once you complete a problem, refresh ./nesting.html in your browser and check to see if the problem's test(s) are passing.
-  Passed tests will be indicated by a green circle.
-  Failed tests will be indicated by a red X.
-
-  You can refresh the page at any time to re-run all the tests.
-*/
-
 ////////// PROBLEM 1 //////////
-
 // Do not edit the code below.
 var employees = [
   {
-    "firstName": "Von",
-    "lastName": "Budibent",
-    "email": "vbudibent0@163.com",
-    "department": "Sales"
+    firstName: "Von",
+    lastName: "Budibent",
+    email: "vbudibent0@163.com",
+    department: "Sales"
   },
   {
-    "firstName": "Catherina",
-    "lastName": "Swalowe",
-    "email": "cswalowe1@example.com",
-    "department": "Engineering"
+    firstName: "Catherina",
+    lastName: "Swalowe",
+    email: "cswalowe1@example.com",
+    department: "Engineering"
   },
   {
-    "firstName": "Theo",
-    "lastName": "Trill",
-    "email": "ttrill2@sina.com.cn",
-    "department": "Services"
+    firstName: "Theo",
+    lastName: "Trill",
+    email: "ttrill2@sina.com.cn",
+    department: "Services"
   },
   {
-    "firstName": "Elsy",
-    "lastName": "McCrorie",
-    "email": "emccrorie3@netscape.com",
-    "department": "Legal"
+    firstName: "Elsy",
+    lastName: "McCrorie",
+    email: "emccrorie3@netscape.com",
+    department: "Legal"
   },
   {
-    "firstName": "Lorie",
-    "lastName": "Handsheart",
-    "email": "lhandsheart4@fotki.com",
-    "department": "Research and Development"
+    firstName: "Lorie",
+    lastName: "Handsheart",
+    email: "lhandsheart4@fotki.com",
+    department: "Research and Development"
   }
 ];
 // Do not edit the code above.
-
 /*
-  Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will loop over the array above and perform the following:
-    1. If employee's first name is Theo, remove that employee because he just got fired.
+  Create a function called 'employeeUpdater' that takes no parameters.
+   employeeUpdater will loop over the array above and perform the following:
+    1. If employee's first name is Theo, remove that employee because he
+     just got fired.
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
-
 //Code Here
-
-
-
+let updatedEmployee = function employeeUpdater() {
+  for (let i=0; i < employees.length; i++)
+  if (employees[i].firstName === Theo) {
+    delete employees[i].firstName
+  } else if (employees[i].firstName === Lorie) {
+  employees[i].department = "HR"
+  return updatedEmployees;
+};
 ////////// PROBLEM 2 //////////
-
 // Do not edit the code below.
 var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 // Do not edit the code above.
-
 /*
   The array above represents IDs tied to reported workplace accidents. 
-  An employee accidentally entered in duplicates to array, making it look as though there are more accidents this year than there actually are.
+  An employee accidentally entered in duplicates to array, making it look
+   as though there are more accidents this year than there actually are.
     1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the workplaceAccidents array.
     2. Use nested for loops to check for duplicate numbers, and then remove the duplicates from the array.
     3. Return the updated array.
 */
-
-//Code Here
-
-
-
+function removeDuplicates (arr) {
+  for 
+}
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
 var cat = {
-  name: 'Fluffy',
+  name: "Fluffy",
   catFriends: [
     {
-      name: 'Grumpy',
-      activities: ['be grumpy', 'eat food']
-    }, 
+      name: "Grumpy",
+      activities: ["be grumpy", "eat food"]
+    },
     {
-      name: 'Lazy Bones',
-      activities: ['sleep', 'pre-sleep naps']
+      name: "Lazy Bones",
+      activities: ["sleep", "pre-sleep naps"]
     }
   ]
-}
+};
 // Do not edit the code above.
 
 /*
@@ -100,33 +93,31 @@ var cat = {
 var grumpyActivity;
 var fluffy2ndFriend;
 
-
-
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
 var myCar = {
-  make: 'Toyota',
-  model: 'Corolla',
+  make: "Toyota",
+  model: "Corolla",
   year: 1992,
   accidents: [
     {
-      date: '3/15/93',
-      damage: '$5,000',
+      date: "3/15/93",
+      damage: "$5,000",
       atFaultForAccident: true
     },
     {
-      date: '7/4/98',
-      damage: '$2,200',
+      date: "7/4/98",
+      damage: "$2,200",
       atFaultForAccident: true
     },
     {
-      date: '6/22/99',
-      damage: '$7,900',
+      date: "6/22/99",
+      damage: "$7,900",
       atFaultForAccident: true
     }
   ]
-}
+};
 // Do not edit the code above.
 
 /*
@@ -140,12 +131,14 @@ var myCar = {
 
 //Code Here
 
-
-
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [
+  [1, 2, 3, 4],
+  [5, 6],
+  [7, 8, 9, 10, 11]
+];
 // Do not edit the code above.
 
 /*
@@ -158,5 +151,3 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-
-
