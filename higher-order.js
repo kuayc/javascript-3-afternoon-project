@@ -9,8 +9,11 @@ const mixedNumbers = [6, 3, 1, 7, 5, 2, 6, 8, 9, 4, 2, 7, 9, 3, 1, 8, 4, 3];
   function(element, index, wholeArray){}  Function Form
   (element, index, wholeArray)=>{}    Arrow Form
 */
-let evenNumbers = mixedNumbers.filter(function(element) {
-  return element % 2 === 0;
+
+let evenNumbers = mixedNumbers.filter(function(element, index, array) {
+  if (element % 2 === 0) {
+    return true;
+  }
 });
 
 ////////// PROBLEM 2 //////////
@@ -32,8 +35,9 @@ const prices = [15.0, 23.0, 78.0, 34.0, 12.0, 86.0, 12.0, 79.0, 32.0];
   function(element, index, wholeArray){}  Function Form
   (element, index, wholeArray)=>{}    Arrow Form
 */
-let postTaxPrices = prices.map(function(ele, ind, arr) {
-  return ele * 1.07;
+
+let postTaxPrices = prices.map(function(element, index, array) {
+  return prices * 1.07;
 });
 
 ////////// PROBLEM 3 //////////
@@ -51,8 +55,14 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 //Code Here
-let totalPopulation = populations.reduce(function(total, ele) {
-  return total + ele;
+
+let totalPopulation = populations.reduce(function(
+  total,
+  element,
+  index,
+  array
+) {
+  return total + element;
 });
 
 ////////// PROBLEM 4 //////////
@@ -92,9 +102,14 @@ const monstersInYourPocket = [
   Use the filter method to return only the monsters that have a CP of over
    200.
 */
-let myStrongest = monstersInYourPocket.filter(function(ele, ind, arr) {
-  return monstersInYourPocket.CP > 200;
+
+let myStrongest = monstersInYourPocket.filter(function(element, index, array) {
+  if (element["CP"] > 200) {
+    return true;
+  }
+  // return myStrongest;
 });
+
 ////////// PROBLEM 5 //////////
 // Do not edit code below.
 const orders = [
@@ -116,7 +131,10 @@ const orders = [
     multiplication). Your answer should be an array of numbers,
      one total for each order.
 */
-let orderTotals = [];
+
+let orderTotals = orders.map(function(element, index, array) {
+  return element.price * (element.tax + 1);
+});
 
 ////////// PROBLEM 6 //////////
 // Do not edit the code below.
@@ -148,4 +166,12 @@ const purchases = [
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal; //Code Here
+let bobsTotal = purchases.reduce(function(total, element, index) {
+  if (element.owner === "Bob") {
+    return total + element.price;
+  } else {
+    return total;
+    console.log(total);
+  }
+}, 0);
+console.log(bobsTotal);
